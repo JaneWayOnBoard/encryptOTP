@@ -2,7 +2,7 @@ from random import randint
 
 
 """Define the CONSTANT ALPHABET"""
-ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
+ALPHABET = 'abcdefghijklmnopqrstuvwxyz'https://github.com/JaneWayOnBoard/encryptOTP.git
 
 """Define a function to generate an OTP with parameters
 for the number of sheets in the pad and the number of
@@ -26,7 +26,7 @@ def load_sheet(filename):
 """run the code and test in the shell :
 sheet = load_sheet('otp0.txt')
 print(sheet)
-"""
+"""https://github.com/JaneWayOnBoard/encryptOTP.git
 
 """ask the user's message and convert to lower case for encryption"""
 
@@ -86,18 +86,18 @@ def menu():
             print('3. Decrypt a message')
             print('4. Quit the program')
             choice = input('Please type 1, 2, 3 or 4 and press Enter ')
-            if choice == '1':
+            if choice == 1:
                 sheets = int(input('How many one-time pads would you like to generate? '))
                 length = int(input('What will be your maximum message length? '))
                 generate_otp(sheets, length)
-            elif choice == '2':
+            elif choice == 2:
                 filename = input('Type in the filename of the OTP you want to use ')
                 sheet = load_sheet(filename)
                 plaintext = get_plaintext()
                 ciphertext = encrypt(plaintext, sheet)
                 filename = input('What will be the name of the encrypted file? ')
                 save_file(filename, ciphertext)
-            elif choice == '3':
+            elif choice == 3:
                 filename = input('Type in the filename of the OTP you want to use ')
                 sheet = load_sheet(filename)
                 filename = input('Type in the name of the file to be decrypted ')
@@ -106,9 +106,9 @@ def menu():
                 print('The message reads:')
                 print('')
                 print(plaintext)
-            elif choice == '4':
+            elif choice == 4:
                 exit()
-            choice = '0'
+            choice = 0
 menu()
 
 
